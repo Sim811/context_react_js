@@ -8,7 +8,7 @@ class UserForm extends React.Component {
     firstName: this.props.firstName, 
     lastName: this.props.lastName, 
     email: this.props.email,
-    avatar: this.props.avatar,
+    // avatar: this.props.avatar,
   };
 
 
@@ -25,13 +25,13 @@ class UserForm extends React.Component {
   render() {
     return(
       <Form onSubmit={this.handleSubmit}>
-        <Form.Select 
+        {/* <Form.Select 
           label="Avatar"
           name="avatar"
           value={this.state.avatar}
           onChange={this.handleChange}
           options={avatarOptions}
-        />
+        /> */}
         <Form.Input
           label="New First Name"
           type="text"
@@ -66,7 +66,7 @@ const ConnectedAccountForm = (props) => (
     {value => (
       <UserForm
         {...props}
-        avatar={value.avatar}
+        // avatar={value.avatar}
         firstName={value.firstName}
         lastName={value.lastName}
         email={value.email}
@@ -77,14 +77,14 @@ const ConnectedAccountForm = (props) => (
 )
 
 
-const avatarOptions =[
-  {key: "f", text:"Flash", value:"../avatars/flash.png"},
-  {key: "s", text:"Superman", value:"../avatars/Superman.png"},
-  {key: "i", text:"Ironman", value:"../avatars/Ironman.png"},
-  {key: "h", text:"Hulk", value:"../avatars/hulk2.png"},
-  {key: "p", text:"Spiderman", value:"../avatars/Spiderman.png"}
+// const avatarOptions =[
+//   {key: "f", text:"Flash", value:"../avatars/flash.png"},
+//   {key: "s", text:"Superman", value:"../avatars/Superman.png"},
+//   {key: "i", text:"Ironman", value:"../avatars/Ironman.png"},
+//   {key: "h", text:"Hulk", value:"../avatars/hulk2.png"},
+//   {key: "p", text:"Spiderman", value:"../avatars/Spiderman.png"}
 
-]
+// ]
 
 
 export default ConnectedAccountForm;

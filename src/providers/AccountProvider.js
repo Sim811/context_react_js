@@ -10,7 +10,7 @@ class AccountProvider extends React.Component {
     firstName: "Erik",
     lastName: "Wilson",
     email: "ewilson@email.com",
-    avatar: 'flash',
+    // avatar: 'flash',
     updateAccount: (value) => this.updateAccount(value),
   };
 
